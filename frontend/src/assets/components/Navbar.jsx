@@ -7,8 +7,7 @@ import { logOut } from "../slices/authSlice";
 import Cart from "./Cart";
 import { Search } from "lucide-react";
 import { useState } from "react";
-// import { useGetAllItemCartQuery } from "../slices/cartApiSlice";
-// import { toast } from "react-toastify";
+
 
 function Navbar() {
   const { userInfo } = useSelector((state) => state.auth);
@@ -23,15 +22,13 @@ function Navbar() {
       dispatch(logOut);
       navigate("/");
     } catch (err) {
-      // toast.error(err?.data?.message || err.error);
-      console.log(err);
+      console.log(err?.message);
     }
   };
 
   // search product
   const [keyword, setKeyword] = useState("");
 
-  // const navigate = useNavigate();
 
   const handleSearch = () => {
     navigate(`/products?keyword=${keyword}`)
