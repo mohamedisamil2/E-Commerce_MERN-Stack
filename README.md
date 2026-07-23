@@ -50,11 +50,11 @@ git clone https://github.com/mohamedisamil2/E-Commerce_MERN_Stack.git
 ### Install dependencies
 
 ```bash
-cd client
+cd frontend
 pnpm add
 
-cd ../server
-npm install
+cd ../backend
+pn add
 ```
 
 ### Run project
