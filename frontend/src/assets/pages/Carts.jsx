@@ -11,7 +11,6 @@ import { ShoppingBag } from "lucide-react";
 
 function Carts() {
   const { data } = useGetAllItemCartQuery();
-  // console.log("cart:", cart);
 
   // Clear
   const [clearAll] = useClearItemCartMutation();
